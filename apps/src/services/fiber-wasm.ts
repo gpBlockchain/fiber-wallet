@@ -65,3 +65,11 @@ const startWasmFiber = async (): Promise<void> => {
 };
 
 export const fiberReady = startWasmFiber();
+
+// Expose fiber instance on window for debugging and use by other pages
+declare global {
+  interface Window {
+    fiber: FiberWasmManager;
+  }
+}
+window.fiber = fiber;

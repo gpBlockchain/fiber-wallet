@@ -63,7 +63,9 @@ export default defineConfig({
       input: {
         popup: resolve(__dirname, "popup.html"),
         offscreen: resolve(__dirname, "offscreen.html"),
-        "service-worker": resolve(__dirname, "src/background/service-worker.ts")
+        "service-worker": resolve(__dirname, "src/background/service-worker.ts"),
+        "content-script": resolve(__dirname, "src/content-script/content-script.ts"),
+        inpage: resolve(__dirname, "src/content-script/inpage.ts")
       },
       output: {
         entryFileNames: "[name].js",

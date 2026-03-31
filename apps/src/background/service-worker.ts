@@ -30,7 +30,9 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
             chrome.runtime.lastError.message
           );
           offscreenCreated = false;
-          ensureOffscreenDocument();
+          ensureOffscreenDocument().catch((e) =>
+            console.error("[Fiber Wallet] Failed to recreate offscreen document:", e)
+          );
         } else if (response && !response.fiberRunning) {
           console.warn("[Fiber Wallet] Fiber not running in offscreen, requesting restart...");
           chrome.runtime.sendMessage(

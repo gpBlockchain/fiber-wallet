@@ -3,7 +3,7 @@
   "name": "Fiber Wallet",
   "version": "0.1.0",
   "description": "CKB Fiber Network Browser Extension Wallet",
-  "permissions": ["storage", "offscreen"],
+  "permissions": ["storage", "offscreen", "alarms"],
   "host_permissions": [
     "http://127.0.0.1:8247/*",
     "ws://127.0.0.1:8248/*"
